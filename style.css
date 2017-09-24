@@ -1,0 +1,10 @@
+html{
+  *, *::after{
+  box-sizing: border-box;
+}
+
+html {
+    background-image: url("pix/snowbank_sunset.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
