@@ -8,18 +8,32 @@ html {
     background-size: 100%;
 }
 
+main{
+  display: grid;
+  grid-template-columns: 1fr; /*-- sets the columns to 1 at smallest screen sizes --*/
+  grid-auto-rows: minmax(125px, auto);
+  grid-gap: .5rem;
+}
+
 .top {
   background-color: #006E07;
-  width: 100%;
+  grid-column: 1 / span 5;
+  grid-row: 1;
   display: inline-block;
+  border: 1px solid black;
   padding: 5px;
+  border-radius: 12px;
 }
 
 .top #face {
   display: inline-block;
+  grid-column: 1;
+  grid-row: 1;
   margin-left: 5px;
   width:10%;
   height: 10%;
+  border: 1px solid black;
+  border-radius: 12px;
 }
 
 .top #links {
@@ -42,9 +56,12 @@ html {
   display:inline-block;
   padding: 5px;
   background-color: #FFCE2E;
-  height: 100%;
-  width: 70%;
+  grid-column: 1;
+  width: 15%;
+  grid-row: 2 / 10;
+  height: 50%;
   border: 1px solid black;
+  border-radius: 12px;
 }
 
 .content_left button{
@@ -56,5 +73,5 @@ html {
 }
 
 footer{
-  
+
 }
