@@ -11,8 +11,18 @@ html {
 main{
   display: grid;
   grid-template-columns: 1fr; /*-- sets the columns to 1 at smallest screen sizes --*/
-  grid-auto-rows: minmax(125px, auto);
-  grid-gap: .5rem;
+  grid-template-rows: auto;
+  grid-gap: .5rem .5rem;
+}
+
+@media screen and (min-width: 550px) {  /*-- for screens above 550px  --*/
+  .main {grid-template-columns: repeat(2, 1fr);} /*-- increases column count to 2--*/
+}
+@media screen and (min-width: 1024px) { /*-- for screens above 1024px  --*/
+  .main {grid-template-columns: repeat(3, 1fr);} /*-- increase column count to 3 --*/
+}
+@media screen and (min-width: 1280px) { /*-- for screens above 1280px  --*/
+  .main {grid-template-columns: repeat(4, 1fr);} /*-- increase column count to 4 --*/
 }
 
 .top {
@@ -30,18 +40,46 @@ main{
   grid-column: 1;
   grid-row: 1;
   margin-left: 5px;
-  width:10%;
+  width: 10%;
   height: 10%;
   border: 1px solid black;
   border-radius: 12px;
 }
 
+.top .upcenter{
+  display: inline-block;
+  grid-row: 1;
+  grid-column: 2 / span 3;
+}
+
+.top .upcenter .banner{
+  font-family: 'Neuton', serif;
+  font-size: 40px;
+}
+
+.top .upcenter .menu{
+  display: inline-block;
+}
+
+.top .upcenter .menu button{
+  display: inline-block;
+  padding: 3px;
+  background-color: #075E1E;
+  text-align: center;
+  width: 75%;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
 .top #links {
-  position: absolute;
+  grid-column: 5;
+  grid-row: 1;
   list-style: none;
   display: inline-block;
-  right: 20px;
-  padding-left: 0;
+}
+
+.top #links i{
+  color: #FFCE2E;
 }
 
 .top ul li{
@@ -66,12 +104,30 @@ main{
 
 .content_left button{
   padding: 3px;
-  background-color: #FFCE2E;
+  background-color: #FFDF3F;
   text-align: center;
   width: 100%;
+  border: 1px solid black;
   border-radius: 12px;
 }
 
 footer{
 
+}
+
+.center{
+  display:inline-block;
+  grid-column: 2 / span 3;
+  grid-row: 2 / 5;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.content_right{
+  display:inline-block;
+  background-color: #006E07;
+  grid-column: 2 / span 3;
+  grid-row: 2 / 5;
+  border: 1px solid black;
+  border-radius: 12px;
 }
