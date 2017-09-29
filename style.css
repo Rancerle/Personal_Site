@@ -50,18 +50,21 @@ main{
   display: inline-block;
   grid-row: 1;
   grid-column: 2 / span 3;
+  width: 75%;
 }
 
 .top .upcenter .banner{
   font-family: 'Neuton', serif;
+  border: 1px solid black;
   font-size: 40px;
+  height: 10%;
 }
 
-.top .upcenter .menu{
+.menu{
   display: inline-block;
 }
 
-.top .upcenter .menu button{
+.menu button{
   display: inline-block;
   padding: 3px;
   background-color: #075E1E;
@@ -71,14 +74,14 @@ main{
   border-radius: 12px;
 }
 
-.top #links {
+#links {
   grid-column: 5;
   grid-row: 1;
   list-style: none;
   display: inline-block;
 }
 
-.top #links i{
+#links i{
   color: #FFCE2E;
 }
 
@@ -117,7 +120,10 @@ footer{
 
 .center{
   display:inline-block;
+  text-align: center;
   grid-column: 2 / span 3;
+  width: 69%;
+  height: 100%;
   grid-row: 2 / 5;
   border: 1px solid black;
   border-radius: 12px;
@@ -125,8 +131,11 @@ footer{
 
 .content_right{
   display:inline-block;
+  text-align: center;
   background-color: #006E07;
   grid-column: 2 / span 3;
+  width: 15%;
+  height: 100%;
   grid-row: 2 / 5;
   border: 1px solid black;
   border-radius: 12px;
