@@ -7,20 +7,10 @@ html {
     background-repeat: repeat-y;
     background-size: 100%;
 }
-/*--@media screen and (min-width: 550px) {
-  .main {grid-template-columns: repeat(2, 1fr);}
-}
-@media screen and (min-width: 1024px) {
-  .main {grid-template-columns: repeat(3, 1fr);} \
-}
-@media screen and (min-width: 1280px) {
-  .main {grid-template-columns: repeat(4, 1fr);} /*-- increase column count to 4 --*/
-}
 
 .top {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1,1fr);
   grid-gap: .5rem .5rem;
   background-color: #006E07;
   border: 1px solid black;
@@ -30,19 +20,15 @@ html {
 
 .top #face {
   grid-column: 1;
-  grid-row: 1;
-  margin-left: 5px;
   border: 1px solid black;
   border-radius: 12px;
 }
 
 img{
-  width: 10%;
-  height: 10%;
+  width: 75%;
 }
 
 .top .upcenter{
-  grid-row: 1;
   grid-column: 2 / span 3;
 }
 
