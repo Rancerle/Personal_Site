@@ -7,28 +7,22 @@ html {
     background-repeat: repeat-y;
     background-size: 100%;
 }
-
-main{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  grid-gap: .5rem .5rem;
+/*--@media screen and (min-width: 550px) {
+  .main {grid-template-columns: repeat(2, 1fr);}
 }
-
-@media screen and (min-width: 550px) {  /*-- for screens above 550px  --*/
-  .main {grid-template-columns: repeat(2, 1fr);} /*-- increases column count to 2--*/
+@media screen and (min-width: 1024px) {
+  .main {grid-template-columns: repeat(3, 1fr);} \
 }
-@media screen and (min-width: 1024px) { /*-- for screens above 1024px  --*/
-  .main {grid-template-columns: repeat(3, 1fr);} /*-- increase column count to 3 --*/
-}
-@media screen and (min-width: 1280px) { /*-- for screens above 1280px  --*/
+@media screen and (min-width: 1280px) {
   .main {grid-template-columns: repeat(4, 1fr);} /*-- increase column count to 4 --*/
 }
 
 .top {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-gap: .5rem .5rem;
   background-color: #006E07;
-  grid-column: 1 / span 5;
-  grid-row: 1;
   border: 1px solid black;
   padding: 5px;
   border-radius: 12px;
@@ -38,16 +32,18 @@ main{
   grid-column: 1;
   grid-row: 1;
   margin-left: 5px;
-  width: 10%;
-  height: 10%;
   border: 1px solid black;
   border-radius: 12px;
+}
+
+img{
+  width: 10%;
+  height: 10%;
 }
 
 .top .upcenter{
   grid-row: 1;
   grid-column: 2 / span 3;
-  width: 75%;
 }
 
 .top .upcenter .banner{
@@ -58,6 +54,7 @@ main{
 
 .menu{
   display: inline-block;
+  grid-column: 5;
 }
 
 .menu a{
@@ -89,8 +86,10 @@ main{
 }
 
 .content{
-  grid-column: 1 / span 5;
-  grid-row: 2 / 5;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5,1fr);
+  grid-gap: .5rem .5rem;
   border: 1px solid black;
 }
 
@@ -98,9 +97,7 @@ main{
   padding: 5px;
   background-color: #FFCE2E;
   grid-column: 1;
-  width: 15%;
-  grid-row: 2 / 5;
-  height: 50%;
+  grid-row: 1 / 5;
   border: 1px solid black;
   border-radius: 12px;
 }
@@ -121,9 +118,7 @@ footer{
 .center{
   text-align: center;
   grid-column: 2 / span 3;
-  width: 69%;
-  height: 100%;
-  grid-row: 2 / 5;
+  grid-row: 1 / 5;
   border: 1px solid black;
   border-radius: 12px;
 }
@@ -133,9 +128,7 @@ footer{
   text-align: center;
   background-color: #006E07;
   grid-column: 5;
-  width: 15%;
-  height: 100%;
-  grid-row: 2 / 5;
+  grid-row: 1 / 5;
   border: 1px solid black;
   border-radius: 12px;
 }
